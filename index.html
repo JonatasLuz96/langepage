@@ -34,7 +34,7 @@
     <main id="home">
       <div>
         <h1>Jonatas<span>Luz</span></h1>
-        <h2>Desenvolvedor Front end</h2>
+        <h2>Engenheiro de Dados Jr</h2>
       </div>
 
       <div class="home-img">
@@ -51,25 +51,24 @@
 
         <div>
           <p>
-            Olá, meu nome é Jonatas, tenho 28 anos e estou cursando o 5º
-            semestre (último) de Análise e Desenvolvimento de Sistemas pela Faculdade
-            Anhanguera. Estou em busca de uma oportunidade estimulante em
-            Tecnologia da Informação, de preferência Desenvolvimento Web como
-            Front-end. Onde eu possa aplicar e aprimorar minhas habilidades
-            técnicas adquiridas durante meus estudos, além de desenvolver
-            competências em um ambiente de trabalho dinâmico e desafiador.
-          </p>
-          <p>
-            Estou entusiasmado para iniciar minha jornada no mundo da Tecnologia
-            da Informação e aberto a oportunidades que me permitam crescer
-            profissionalmente, contribuindo para o sucesso da equipe e da
-            empresa.
+            Busco minha primeira oportunidade como Engenheiro de Dados Júnior. Estou me desenvolvendo na área
+            de dados com foco em backend e engenharia, com o objetivo de aplicar meus conhecimentos em
+            ambientes reais, colaborar com equipes de tecnologia, aprender com profissionais experientes e crescer
+            junto com a empresa.
           </p>
         </div>
 
         <div class="habilidades">
-          <h3>Habilidades</h3>
-          <img src="./img/tec.png" />
+          <h3>Conhecimentos Técnicos</h3>
+          <ul class="habi-tec">
+            <li>Linguagens de Programação: Python (Pandas, NumPy, OS), JavaScript (React), HTML, CSS</li>
+            <li>Bancos de Dados: SQL (MySQL)</li>
+            <li>Cloud Computing: Estudando AWS (conceitos básicos, EC2, S3)</li>
+            <li>Versionamento de Código: Git, GitHub</li>
+            <li>Outros: Conceitos de ETL, estruturação de dados, APIs REST</li>
+            <li>Inglês: Básico</li>
+          </ul>
+          <img src="./img/tecnologias.png" />
         </div>
       </div>
     </section>
@@ -77,29 +76,47 @@
     <!-- PROJETOS -->
 
     <section id="projetos">
-      <h2>Projetos</h2>
-      <div class="caixa-projetos">
+      <h2>Meus Projetos</h2>
+    
+      <!-- Botões -->
+      <button class="btn-nav left" onclick="scrollProjetos(-1)"><</button>
+      <button class="btn-nav right" onclick="scrollProjetos(1)">></button>
+    
+      <!-- Carrossel -->
+      <div class="caixa-projetos" id="carrossel">
 
-        <!-- PROJETO 1 -->
-        <div class="card um">
-          <img src="./img/moeda.png" />
-          <h3>Conversor de Moedas</h3>
-          <p>
-            Este projeto é um conversor de moedas simples. Ele permite a conversão de valores entre diferentes moedas, como Real e Dólar, com uma interface simples e intuitiva.
-          </p>
-          <a href="https://github.com/JonatasLuz96/Conversor_Moedas.git" target="_blank">VER PROJETO</a>
+        <div class="card">
+          <img src="./img/netflix.png" alt="Projeto 1">
+          <h3>ETL com Dados da Netflix</h3>
+          <p>Esse projeto é um script em Python que faz um processo de ETL (Extrair, Transformar e Carregar) com arquivos do Excel contendo dados da Netflix. A ideia é juntar tudo, organizar e gerar um arquivo final limpinho, pronto pra análise.</p>
+          <a href="https://github.com/JonatasLuz96/etl-netflix.git" target="_blank">Ver mais</a>
         </div>
 
-        <!-- PROJETO 2 -->
-        <div class="card dois">
-          <img src="./img/clock.jpg" />
+        <div class="card">
+          <img src="./img/istockphoto-1369267861-612x612.jpg" alt="Projeto 2">
+          <h3>ETL com API DummyJSON</h3>
+          <p>Este projeto é um exemplo simples de processo ETL (Extract, Transform, Load) utilizando Python. Ele consome dados da API pública DummyJSON, extrai informações dos usuários e salva cada usuário em um arquivo .json individual dentro de uma pasta local.</p>
+          <a href="https://github.com/JonatasLuz96/etl-simples.git" target="_blank">Ver mais</a>
+        </div>
+
+        <div class="card">
+          <img src="./img/relogio.png" alt="Projeto 3">
           <h3>Relógio Digital</h3>
-          <p>
-            Um projeto funcional, responsivo e minimalista que exibe a hora atual em tempo real, com atualização dinâmica a cada segundo.
-          </p>
-          <a href="https://github.com/JonatasLuz96/Relogio_digital.git" target="_blank">VER PROJETO</a>
+          <p>O projeto exibe a hora atual em tempo real, atualizando automaticamente a cada segundo. A interface é simples, moderna e responsiva, ideal para demonstrar conceitos básicos de manipulação do DOM e atualizações dinâmicas com JavaScript.</p>
+          <a href="#">Ver mais</a>
         </div>
-      </section>
+
+        <div class="card">
+          <img src="https://via.placeholder.com/150" alt="Projeto 4">
+          <h3>Projeto 4</h3>
+          <p>Descrição breve do projeto 1.</p>
+          <a href="#">Ver mais</a>
+        </div>
+          
+        <!-- Adicione mais cards -->
+      </div>
+    </section>
+    
     <!-- CONTATO -->
 
     <section id="contato">
@@ -136,14 +153,16 @@
 
         <a
           class="baixar"
-          href="./Curriculo cv2025.pdf"
+          href="./docs/Curriculo_JonatasLuz_2025.pdf"
           target="_blank"
           download
           >Baixar CV</a
         >
       </div>
     </section>
-
+    
+    <script src="script.js"></script>
+    
    
   </body>
 </html>

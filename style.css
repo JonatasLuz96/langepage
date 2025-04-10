@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+  }  
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +17,7 @@
     height: 60px;
     background: #272727;
     position: fixed;
+    z-index: 1000;
 }
 
 .caixa-menu ul {
@@ -47,17 +52,7 @@
     height: 40px;
 }
 
-.tradutor {
-    position: absolute;
-    display: flex;
-    gap: 10px;
-    left: 90%;
-}
-
-.tradutor img {
-    height: 40px;
-    
-}
+/* Home */
 
 #home {
     background-color: #272727;
@@ -101,15 +96,17 @@
     font-size: 50px;
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .caixa-sobre {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     background-color: #272727;
     width: 80%;
     height: 500px;
-    gap: 40px;
+    gap: 20px;
     border-radius: 20px;
     margin-top: 20px;
 }
@@ -117,7 +114,7 @@
 .caixa-sobre p {
     color: white;
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     text-indent: 1em;
     text-align: start; 
     word-spacing: 3px;
@@ -135,9 +132,18 @@
     font-weight:lighter
 }
 
+.habi-tec {
+    text-align: start;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 300;
+}
+
+.habi-tec li {
+    margin-bottom: 10px;
+}
 
 .habilidades {
-    height: 75%;
     text-align: center;
     margin-right: 40px;
     border-left: 3px solid rgb(25, 25, 25);
@@ -151,26 +157,55 @@
 }
 
 .habilidades img{
-    height: 80px;
+    height: 100px;
 }
 
 /* PROJETOS */
 
+.btn-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 2;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
+
+.btn-nav:hover {
+    background-color: #F38200;
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+/* Garante que o container principal não fique "relative" por padrão */
+
 #projetos {
+    position: relative;
     background-color: #272727;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     text-align: center;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column; 
     align-items: center;
 }
 
 #projetos h2 {
     font-size: 50px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 70px;
     margin-bottom: 20px;
     color: white;
 }
@@ -178,13 +213,30 @@
 .caixa-projetos {
     display: flex;
     gap: 50px;
-    margin-top: 20px;
+    justify-content: center;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE e Edge */
+}
+
+.caixa-projetos::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Opera */
+}
+
+.caixa-projetos::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
 }
 
 .card {
+    scroll-snap-align: start;
     background-color: #2E2E2E;
     height: 500px;
-    width: 400px;
+    flex: 0 0 300px;
     border-radius: 20px;
     color: white;
     display: flex;
@@ -194,9 +246,8 @@
     box-shadow: 0.1em 0.1em 1em black;
 }
 
-
-
-.dois img {
+.card img {
+    height: 150px;
     border-radius: 100%;
 }
 
@@ -216,14 +267,10 @@
     font-weight: bold;
 }
 
-.card a:hover{
+.card a:hover {
     background-color: #272727;
     border: 2px solid #F38200;
     transition: 0.5s;
-}
-
-.card img{
-    height: 150px;
 }
 
 /* CONTATO */
@@ -231,7 +278,6 @@
 #contato {
     background-color: #F38200;
     height: 100vh;
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -242,6 +288,7 @@
     font-size: 50px;
     text-align: center;
     margin-top: 30px;
+    margin-bottom: 20px;
     color: white;
 }
 
