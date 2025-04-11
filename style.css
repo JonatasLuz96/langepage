@@ -55,7 +55,10 @@ html {
 /* Home */
 
 #home {
-    background-color: #272727;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     justify-content: space-around;
@@ -74,7 +77,7 @@ html {
 }  
 
 #home h2 {
-    color: #C2C2C2;
+    color: #e0e0e0;
     margin-left: 20px;
     font-size: 35px;
     font-weight: 400;
@@ -95,8 +98,8 @@ html {
     color: white;
     font-size: 50px;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    
 }
 
 .caixa-sobre {
@@ -115,7 +118,6 @@ html {
     color: white;
     font-weight: 300;
     font-size: 1.3rem;
-    text-indent: 1em;
     text-align: start; 
     word-spacing: 3px;
 }
@@ -287,8 +289,7 @@ html {
 #contato h2 {
     font-size: 50px;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 50px;
     color: white;
 }
 
@@ -361,11 +362,11 @@ html {
     #menu {
         display: flex;
         justify-content: center;
-        height: 90px;
+        height: 70px;
     }
 
     .caixa-menu ul {
-        gap: 30px;
+        gap: 20px;
     }
 
     .caixa-menu li{
@@ -376,10 +377,12 @@ html {
     .logo img {
         margin-top: 10px;
         left: 10px;
-        height: 50px;
+        height: 30px;
     }
 
     #home {
+        background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(./img/background_2.jpg);
+        background-size: cover;
         height: 100vh;
         width: 100%;
         display: flex;
@@ -398,12 +401,12 @@ html {
     #home h2 {
         font-size: 20px;
         margin-left: 0;
-       
         text-align: center;
+        color: #e0e0e0;
     }
 
     #home img {
-        height: 300px;
+        max-height: 200px;
         margin-top: 80px;
     }
 
@@ -411,7 +414,8 @@ html {
         height: 100%;
         width: 100%;
         margin-right: 180px;
-        padding: 50px 0;
+        padding-top: 100px;
+        padding-bottom: 60px;
     }
 
     .caixa-sobre {
@@ -422,20 +426,17 @@ html {
         height: auto;
         padding: 20px;
         text-align: center;
+        margin: 0;
     }
 
     .caixa-sobre p {
-        text-align: start;
-        width: 90%;
-        margin-left: 25px;
-        font-size: 1.1rem;
-        word-spacing: 5px;
+        padding-left: 2px;
+        font-size: 15px;
     }
 
     .caixa-sobre .img-sobre {
-        margin-right: 10px;
+        margin-right: 25px;
         height: 200px;
-        width: auto;
     }
 
     .habilidades {
@@ -444,8 +445,13 @@ html {
         padding-left: 0;
     }
 
+    .habi-tec li { 
+        padding: 0 20px;
+        list-style-type: none;
+    }
+
     .habilidades img {
-        margin-bottom: 30px;
+        margin: 30px 0;
         height: 50px;
     }
 
@@ -462,6 +468,7 @@ html {
     }
 
     .card {
+        min-height: 500px;
         width: 80%;
     }
 
@@ -469,7 +476,6 @@ html {
         height: 100vh;
         width: 100%;
         margin-right: 180px;
-        height: auto;
         padding: 50px 0;
     }
 
@@ -482,7 +488,6 @@ html {
         width: 80%;
         font-size: 1.1em;
     }
-
    
 }
 
@@ -523,6 +528,7 @@ html {
     }
 
     .card p {
-        font-size: 14px;
+        
+        font-size: 13px;
     }
 }
