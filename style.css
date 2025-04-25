@@ -11,10 +11,10 @@ html {
 
 #menu {
     display: flex;
-    justify-content: end;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 60px;
+    height: 70px;
     background: #272727;
     position: fixed;
     z-index: 1000;
@@ -29,8 +29,8 @@ html {
 
 .caixa-menu li {
     display: inline;
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -46,7 +46,7 @@ html {
 
 
 .logo img {
-    position: absolute;
+    
     top: 10px;
     left: 70px;
     height: 40px;
@@ -55,15 +55,11 @@ html {
 /* Home */
 
 #home {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./img/background.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    background-color: #272727;
     height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
 }
 
 #home h1{
@@ -83,11 +79,15 @@ html {
     font-weight: 400;
 }
 
+#home img{
+    width: 500px;
+}
+
 /* SOBRE MIM */
 
 #sobre {
     background-color: #F38200;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,7 +98,7 @@ html {
     color: white;
     font-size: 50px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 70px;
     
 }
 
@@ -207,7 +207,7 @@ html {
 #projetos h2 {
     font-size: 50px;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 110px;
     margin-bottom: 20px;
     color: white;
 }
@@ -361,12 +361,12 @@ html {
 @media (max-width: 768px) {
     #menu {
         display: flex;
-        justify-content: center;
         height: 70px;
+        justify-content: start;
     }
 
     .caixa-menu ul {
-        gap: 20px;
+        gap: 15px;
     }
 
     .caixa-menu li{
@@ -375,14 +375,13 @@ html {
 
 
     .logo img {
-        margin-top: 10px;
-        left: 10px;
+        position: absolute;
         height: 30px;
+        margin-left: -50px;
+        margin-top: 10px;
     }
 
     #home {
-        background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, 0.5)), url(./img/background_2.jpg);
-        background-size: cover;
         height: 100vh;
         width: 100%;
         display: flex;
@@ -406,7 +405,7 @@ html {
     }
 
     #home img {
-        max-height: 200px;
+        width: 300px;
         margin-top: 80px;
     }
 
@@ -414,7 +413,7 @@ html {
         height: 100%;
         width: 100%;
         margin-right: 180px;
-        padding-top: 100px;
+        padding-top: 50px;
         padding-bottom: 60px;
     }
 
@@ -426,7 +425,11 @@ html {
         height: auto;
         padding: 20px;
         text-align: center;
-        margin: 0;
+        margin-top: 20px;
+    }
+
+    .caixa-sobre h2{
+        margin-bottom: 100px;
     }
 
     .caixa-sobre p {
@@ -476,7 +479,7 @@ html {
         height: 100vh;
         width: 100%;
         margin-right: 180px;
-        padding: 50px 0;
+        
     }
 
     .caixa-contato {
